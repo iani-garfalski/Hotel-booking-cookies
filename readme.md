@@ -1,17 +1,17 @@
-Hotel Booking API Documentation
+# Hotel Booking API Documentation
 
-Overview
+## Overview
 The Hotel Booking API is designed to manage hotel operations such as room bookings, customer management, and payment processing, as well as notifications for hotel staff when bookings are created or canceled.
 
-Models and Relationships
+## Models and Relationships
 
-Models
+## Models
 Room: Represents a hotel room.
 Customer: Represents a customer.
 Booking: Represents a booking made by a customer.
 Payment: Represents a payment made for a booking.
 
-Relationships
+### Relationships
 A Room can have many Bookings.
 A Booking belongs to one Room and one Customer.
 A Customer can have many Bookings.
@@ -31,9 +31,9 @@ user: root
 password: root
 
 
-API endpoints:
+## API endpoints:
 
-Room endpoints:
+### Room endpoints:
 
 URL: /api/rooms
 Method: GET
@@ -49,7 +49,7 @@ Method: GET
 Description: Retrieve a specific room by ID.
 
 
-Customer endpoints:
+### Customer endpoints:
 
 URL: /api/customers
 Method: GET
@@ -64,7 +64,7 @@ Method: GET
 Description: Retrieve a specific customer by ID.
 
 
-Booking endpoints:
+### Booking endpoints:
 
 URL: /api/bookings
 Method: GET
@@ -84,7 +84,7 @@ Method: DELETE
 Description: Delete a specific booking by ID.
 Event: Will log a message to notify staff 
 
-Payment endpoints:
+### Payment endpoints:
 
 URL: /api/payments
 Method: GET
@@ -98,22 +98,25 @@ URL: /api/payments/{id}
 Method: GET
 Description: Retrieve a specific payment by ID.
 
-Event and Listener System:
+## Event and Listener System:
 
-Events
+## Events
 BookingCreated: Triggered when a new booking is created.
 BookingCanceled: Triggered when a booking is deleted.
-Listeners
+
+## Listeners
 SendBookingNotification: Listens for the BookingCreated and BookingCanceled
 events and sends notifications to hotel staff.
 
 
-Running unit tests:
+## Running unit tests:
 
 Only the model relations unit tests have been implemented.
 There is also a env for test and a database for testing.
 Please write the following artisan command to run the test
 
 `php artisan test`
+
+
 
 
